@@ -5,8 +5,7 @@ Query the Chinook Database to help the team at Chinook music store understand th
 - [Introduction](#introduction)
 - [Chinnok Database](#chinnok-database)
 - [Intructions](#instruction)
-- [Queries](#queries)
-- [References](#references)
+
 
 ---
 ## Introduction
