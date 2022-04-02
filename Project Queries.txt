@@ -1,0 +1,53 @@
+/* Query 1 - query used for first insight */
+SELECT (Customer.FirstName ||' '|| Customer.LastName) AS CustomerName 
+       SUM(Invoice.Total) AS TotalSpent
+FROM Customer
+JOIN Invoice
+ON Invoice.CustomerId = Customer.CustomerId
+GROUP BY CustomerName
+ORDER BY TotalSpent DESC
+LIMIT 5;
+
+
+/* Query 2 - query used for second insight */
+SELECT Artist.Name AS ArtistName, 
+       SUM(InvoiceLine.UnitPrice*InvoiceLine.Quantity) AS AmountSpent
+FROM Artist
+JOIN Album
+ON Album.ArtistId = Artist.ArtistId
+JOIN Track
+ON Album.AlbumId = Track.AlbumId
+JOIN InvoiceLine
+ON Track.TrackId = InvoiceLine.TrackId
+JOIN Invoice
+ON InvoiceLine.InvoiceId = Invoice.InvoiceId
+JOIN Customer
+ON Invoice.CustomerId = Customer.CustomerId
+GROUP BY Artist.Name
+ORDER BY AmountSpent DESC
+LIMIT 5;
+
+
+/* Query 3 - query used for third insight */
+SELECT Customer.City AS CustomerCity, 
+       SUM(Invoice.Total) AS TotalInvoices
+FROM Customer
+JOIN Invoice
+ON Customer.CustomerId = Invoice.CustomerId
+GROUP BY Customer.City
+ORDER BY TotalInvoices DESC
+LIMIT 5;
+
+
+/* Query 4 - query used for fourth insight */
+SELECT Genre.Name AS MusicGenre, 
+       SUM(InvoiceLine.UnitPrice) AS TotalEarnings
+FROM Genre
+JOIN Track
+ON Track.GenreId = Genre.GenreId
+JOIN InvoiceLine
+ON InvoiceLine.TrackId = Track.TrackId
+GROUP BY Genre.Name
+ORDER BY TotalEarnings DESC
+LIMIT 5;
+
