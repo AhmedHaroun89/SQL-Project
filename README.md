@@ -13,7 +13,7 @@ In this lab, you will query the Chinook Database. The Chinook Database holds inf
 
 ---
 Ok Database
-Below you can see the Schema of Chinnok Database:
+Below you can see the Schema of Chinook Database Schema:
 
-## Chino<img width="652" alt="screen-shot-2017-06-29-at-10 51 15-pm" src="https://user-images.githubusercontent.com/102859975/161389974-ee2b5185-2895-4824-aea9-48487954b6cf.png">
+<img width="652" alt="screen-shot-2017-06-29-at-10 51 15-pm" src="https://user-images.githubusercontent.com/102859975/161389974-ee2b5185-2895-4824-aea9-48487954b6cf.png">
 
